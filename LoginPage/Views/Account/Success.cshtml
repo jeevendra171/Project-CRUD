@@ -1,0 +1,31 @@
+﻿@model IEnumerable<LoginPage.Models.Login>
+@{
+    ViewBag.Title = "Success";
+}
+
+<h2>Success Login</h2>
+<table>
+    <tr>
+        <th>User name</th>
+        <th>Email</th>
+        <th>Mobile No</th>
+        <th>Address</th>
+        <th>Password</th>
+    </tr>
+    @foreach(var m in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(L => m.Id)</td>
+                    <td>@Html.DisplayFor(L => m.Name)</td>
+                    <td>@Html.DisplayFor(L => m.Email)</td>
+                    <td>@Html.DisplayFor(L => m.MobileNumber)</td>
+                    <td>@Html.DisplayFor(L => m.Address)</td>
+                    <td>@Html.DisplayFor(L => m.Password)</td>
+                    <td>
+                        @Html.ActionLink("Edit Profile", "Edit", new { Id = m.Id })
+                    </td>
+                </tr>
+            }
+</table>
+
+

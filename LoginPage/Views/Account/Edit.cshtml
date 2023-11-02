@@ -1,0 +1,38 @@
+﻿@model LoginPage.Models.Login
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@using(Html.BeginForm("Update","Account"))
+            {
+                <table>
+                    <tr>
+                        @Html.HiddenFor(L => L.Id)
+                        <td>User Name</td>
+                        <td>@Html.TextBoxFor(m => m.Name)</td>
+                    </tr>
+                    <tr>
+                        <td>User Name</td>
+                        <td>@Html.TextBoxFor(m => m.Email)</td>
+                    </tr>
+                    <tr>
+                        <td>User Name</td>
+                        <td>@Html.TextBoxFor(m => m.MobileNumber)</td>
+                    </tr>
+                    <tr>
+                        <td>User Name</td>
+                        <td>@Html.TextBoxFor(m => m.Address)</td>
+                    </tr>
+                    <tr>
+                        <td>User Name</td>
+                        <td>@Html.TextBoxFor(m => m.Password)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value=" Update" class="btn btn-primary" />
+                        </td>
+                    </tr>
+                </table>
+            }
+
